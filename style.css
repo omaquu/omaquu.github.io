@@ -202,32 +202,47 @@ body {
 /* Holographic Pedestal & Logo Chamber */
 .pedestal-stage {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 270px;
+  height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 26px;
+  margin: 10px auto 26px auto;
+}
+
+/* Orbit dashed constellation ring */
+.orbit-ring {
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  animation: rotateCW 50s linear infinite;
 }
 
 /* Glowing rotating holographic rings */
 .holo-ring-outer {
   position: absolute;
-  inset: -12px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: 1.5px dashed rgba(139, 92, 246, 0.35);
   animation: rotateCW 24s linear infinite;
+  pointer-events: none;
 }
 
 .holo-ring-inner {
   position: absolute;
-  inset: -4px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 1.5px solid transparent;
   border-top-color: #f59e0b;
   border-bottom-color: #8b5cf6;
   animation: rotateCCW 12s linear infinite;
   filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4));
+  pointer-events: none;
 }
 
 @keyframes rotateCW {
@@ -243,13 +258,14 @@ body {
 /* Floating pedestal base illumination */
 .pedestal-base {
   position: absolute;
-  bottom: -20px;
-  width: 130px;
+  bottom: 10px;
+  width: 140px;
   height: 28px;
-  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.5) 0%, rgba(139, 92, 246, 0.3) 40%, transparent 80%);
-  filter: blur(10px);
+  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.45) 0%, rgba(139, 92, 246, 0.25) 40%, transparent 80%);
+  filter: blur(12px);
   border-radius: 50%;
   animation: pulseBase 3s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 @keyframes pulseBase {
@@ -258,8 +274,8 @@ body {
 }
 
 .creator-logo-container {
-  width: 96px;
-  height: 96px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.8), rgba(139, 92, 246, 0.8));
@@ -281,7 +297,167 @@ body {
 
 @keyframes floatAvatar {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-7px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ===================================================================
+   ORBITAL SOCIAL SATELLITE BUTTONS
+   =================================================================== */
+.orbit-social-btn {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(14, 18, 28, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  text-decoration: none;
+  z-index: 4;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.25s var(--ease-spring), border-color 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.orbit-social-btn svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.2s ease;
+}
+
+.orbit-social-btn:hover {
+  transform: translate(-50%, -50%) scale(1.22);
+  z-index: 10;
+  background: rgba(20, 26, 42, 0.95);
+}
+
+.orbit-social-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Floating Tooltip */
+.orbit-social-btn::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: rgba(6, 8, 14, 0.92);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.orbit-social-btn:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Individual Platform Accents */
+.orbit-twitch:hover {
+  border-color: #9146ff;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(145, 70, 255, 0.7);
+}
+
+.orbit-kick:hover {
+  border-color: #53fc18;
+  color: #53fc18;
+  box-shadow: 0 0 18px rgba(83, 252, 24, 0.7);
+}
+
+.orbit-youtube:hover {
+  border-color: #ff0000;
+  color: #ff4d4d;
+  box-shadow: 0 0 18px rgba(255, 0, 0, 0.7);
+}
+
+.orbit-discord:hover {
+  border-color: #5865f2;
+  color: #7983f5;
+  box-shadow: 0 0 18px rgba(88, 101, 242, 0.7);
+}
+
+.orbit-tiktok:hover {
+  border-color: #00f2fe;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(0, 242, 254, 0.7);
+}
+
+.orbit-x:hover {
+  border-color: #ffffff;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.7);
+}
+
+.orbit-instagram:hover {
+  border-color: #e1306c;
+  color: #f77737;
+  box-shadow: 0 0 18px rgba(225, 48, 108, 0.7);
+}
+
+.orbit-snapchat:hover {
+  border-color: #fffc00;
+  color: #fffc00;
+  box-shadow: 0 0 18px rgba(255, 252, 0, 0.7);
+}
+
+.orbit-kofi:hover {
+  border-color: #ff5e5b;
+  color: #ff5e5b;
+  box-shadow: 0 0 18px rgba(255, 94, 91, 0.7);
+}
+
+/* Position calculations for 9 nodes around R = 106px */
+.pos-yt        { left: 50%; top: calc(50% - 106px); }
+.pos-twitch    { left: calc(50% + 68px); top: calc(50% - 81px); }
+.pos-kick      { left: calc(50% + 104px); top: calc(50% - 18px); }
+.pos-discord   { left: calc(50% + 92px); top: calc(50% + 53px); }
+.pos-tiktok    { left: calc(50% + 36px); top: calc(50% + 100px); }
+.pos-x         { left: calc(50% - 36px); top: calc(50% + 100px); }
+.pos-instagram { left: calc(50% - 92px); top: calc(50% + 53px); }
+.pos-snapchat  { left: calc(50% - 104px); top: calc(50% - 18px); }
+.pos-kofi      { left: calc(50% - 68px); top: calc(50% - 81px); }
+
+/* Mobile scaling for orbital buttons */
+@media (max-width: 480px) {
+  .pedestal-stage {
+    width: 240px;
+    height: 240px;
+  }
+  .orbit-ring {
+    width: 180px;
+    height: 180px;
+  }
+  .orbit-social-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .orbit-social-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+  .pos-yt        { left: 50%; top: calc(50% - 90px); }
+  .pos-twitch    { left: calc(50% + 58px); top: calc(50% - 69px); }
+  .pos-kick      { left: calc(50% + 88px); top: calc(50% - 16px); }
+  .pos-discord   { left: calc(50% + 78px); top: calc(50% + 45px); }
+  .pos-tiktok    { left: calc(50% + 31px); top: calc(50% + 85px); }
+  .pos-x         { left: calc(50% - 31px); top: calc(50% + 85px); }
+  .pos-instagram { left: calc(50% - 78px); top: calc(50% + 45px); }
+  .pos-snapchat  { left: calc(50% - 88px); top: calc(50% - 16px); }
+  .pos-kofi      { left: calc(50% - 58px); top: calc(50% - 69px); }
 }
 
 /* Creator Status Pill */
