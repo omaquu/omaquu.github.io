@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Omaquu — Hub, Pelit & Projektit</title>
+  <meta id="meta-desc" name="description" content="Omaquun virallinen projektisivu — Striimit, tulevat pelit (Tin & Sand, Mindflower) ja hyödylliset sovellukset (EQCoach, GamerGamma).">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='sans-serif' font-weight='800' fill='white'>O</text></svg>">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient background glow elements -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <div class="container">
+    
+    <!-- ==========================================
+         TOP BAR: LANGUAGE SWITCHER
+         ========================================== -->
+    <div class="top-bar">
+      <div class="lang-switch" role="group" aria-label="Language selector">
+        <button class="lang-btn active" id="btn-fi" onclick="setLanguage('fi')" aria-pressed="true">
+          <span class="lang-flag">🇫🇮</span> FI
+        </button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')" aria-pressed="false">
+          <span class="lang-flag">🇬🇧</span> EN
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         HERO SECTION / PROFILE
+         ========================================== -->
+    <header class="hero">
+      <div class="avatar-wrapper">
+        <div class="avatar">O</div>
+      </div>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span data-i18n="hero_status">Kehittää pelejä ja työkaluja</span>
+      </div>
+
+      <h1 class="hero-title">Omaquu</h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Pelinkehittäjä, striimaaja ja koodaaja. Tältä sivulta löydät kootusti tulevat peliprojektit, sovellukset ja yhteisölinkit.
+      </p>
+
+      <div class="quick-links">
+        <a href="https://omaquu.com" target="_blank" rel="noopener noreferrer" class="quick-btn">
+          <!-- Globe Icon -->
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          omaquu.com
+        </a>
+
+        <a href="https://github.com/omaquu" target="_blank" rel="noopener noreferrer" class="quick-btn">
+          <!-- GitHub Icon -->
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- ==========================================
+         MAIN SPOTLIGHT: omaquu.com
+         ========================================== -->
+    <main>
+      <div class="bento-grid">
+        <a href="https://omaquu.com" target="_blank" rel="noopener noreferrer" class="bento-card col-12 card-featured">
+          <div class="card-featured-badge" data-i18n="card_hub_badge">Pääsivusto</div>
+          <div class="card-top">
+            <div class="card-icon icon-purple">
+              <!-- Broadcast/Stream/Radio Icon -->
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M4.93 4.93a10 10 0 0 1 14.14 0"></path>
+                <path d="M7.76 7.76a6 6 0 0 1 8.48 0"></path>
+                <circle cx="12" cy="12" r="2"></circle>
+                <path d="M12 14v7"></path>
+                <path d="M9 21h6"></path>
+              </svg>
+            </div>
+            <div class="card-arrow">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+              </svg>
+            </div>
+          </div>
+          
+          <h2 class="card-title">omaquu.com</h2>
+          <p class="card-desc" data-i18n="card_hub_desc">
+            Virallinen kotipesä ja yhteisöportaali. Täältä löydät livestriimit, uusimmat sisällöt sekä kaikki sosiaalisen median kanavat kätevästi saman katon alta.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag highlight">Stream Hub</span>
+            <span class="tag" data-i18n="tag_socials">Sosiaalinen Media</span>
+            <span class="tag" data-i18n="tag_community">Yhteisö</span>
+            <span class="tag">Live</span>
+          </div>
+
+          <div class="card-action">
+            <span data-i18n="card_hub_action">Avaa sivusto omaquu.com</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- ==========================================
+           SECTION 2: GAMES (PELIT)
+           ========================================== -->
+      <div class="section-header">
+        <h2 class="section-title">
+          <!-- Gamepad Icon -->
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <rect x="2" y="6" width="20" height="12" rx="4"></rect>
+            <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"></path>
+          </svg>
+          <span data-i18n="sec_games_title">Tulevat Pelit</span>
+        </h2>
+        <span class="section-count" data-i18n="sec_games_count">2 Peliprojektia kehityksessä</span>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Game 1: Tin & Sand -->
+        <div class="bento-card col-6">
+          <div class="card-top">
+            <div class="card-icon icon-amber">
+              <!-- Castle / Strategy / Shield Icon -->
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M12 2l7 4v6c0 5.25-3.5 10-7 11-3.5-1-7-5.75-7-11V6l7-4z"></path>
+                <path d="M12 8v8M8 12h8"></path>
+              </svg>
+            </div>
+            <span class="badge-upcoming">
+              <span class="status-dot" style="background-color: #fbbf24; box-shadow: 0 0 8px #fbbf24;"></span>
+              <span data-i18n="badge_upcoming">Tulossa</span>
+            </span>
+          </div>
+
+          <h3 class="card-title">Tin &amp; Sand</h3>
+          <p class="card-desc" data-i18n="game_tin_desc">
+            Diorama-tyylinen toisen maailmansodan (WW2) autobattler -strategiapeli. Kokoa miniatyyrijoukkosi, suunnittele taktinen sijoittelu ja seuraa dynaamisia taisteluita eläväisellä pienoismallikentällä.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag amber">WW2</span>
+            <span class="tag amber">Autobattler</span>
+            <span class="tag" data-i18n="tag_strategy">Strategia</span>
+            <span class="tag">Diorama</span>
+            <span class="tag">PC</span>
+          </div>
+        </div>
+
+        <!-- Game 2: Mindflower -->
+        <div class="bento-card col-6">
+          <div class="card-top">
+            <div class="card-icon icon-violet">
+              <!-- Cog / Flower / Magic Icon -->
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <span class="badge-upcoming">
+              <span class="status-dot" style="background-color: #c084fc; box-shadow: 0 0 8px #c084fc;"></span>
+              <span data-i18n="badge_upcoming">Tulossa</span>
+            </span>
+          </div>
+
+          <h3 class="card-title">Mindflower</h3>
+          <p class="card-desc" data-i18n="game_mind_desc">
+            Diablo-henkinen, synkän lumoava toimintaroolipeli (ARPG) steampunk-teemalla. Nopeatempoista hakkaamista, mekanisoituja hirviöitä, syvällistä kykypuuta ja runsasta varusteiden keräilyä.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag purple">ARPG</span>
+            <span class="tag purple">Steampunk</span>
+            <span class="tag">Hack &amp; Slash</span>
+            <span class="tag">Loot</span>
+            <span class="tag">Dark Fantasy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           SECTION 3: APPS & TOOLS (SOVELLUKSET)
+           ========================================== -->
+      <div class="section-header">
+        <h2 class="section-title">
+          <!-- Wrench / Code / App Icon -->
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <span data-i18n="sec_apps_title">Sovellukset &amp; Työkalut</span>
+        </h2>
+        <span class="section-count" data-i18n="sec_apps_count">Julkaistut projektit</span>
+      </div>
+
+      <div class="bento-grid">
+        <!-- App 1: EQCoach -->
+        <a href="https://omaquu.github.io/EQCoach/" target="_blank" rel="noopener noreferrer" class="bento-card col-6">
+          <div class="card-top">
+            <div class="card-icon icon-cyan">
+              <!-- Sliders / Audio / Coach Icon -->
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+              </svg>
+            </div>
+            <div class="card-arrow">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+            <h3 class="card-title" style="margin-bottom: 0;">EQCoach</h3>
+            <span class="badge-live">Live</span>
+          </div>
+
+          <p class="card-desc" data-i18n="app_eq_desc">
+            Interaktiivinen valmennus- ja harjoitussovellus suoraan selaimessasi. Suunniteltu selkeäksi ja helppokäyttöiseksi oppimisen tueksi.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag cyan">Web App</span>
+            <span class="tag cyan">GitHub Pages</span>
+            <span class="tag" data-i18n="tag_interactive">Interaktiivinen</span>
+            <span class="tag" data-i18n="tag_coaching">Valmennus</span>
+          </div>
+
+          <div class="card-action">
+            <span data-i18n="app_eq_action">Kokeile sovellusta</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+
+        <!-- App 2: GamerGamma -->
+        <a href="https://omaquu.github.io/gamergamma/" target="_blank" rel="noopener noreferrer" class="bento-card col-6">
+          <div class="card-top">
+            <div class="card-icon icon-emerald">
+              <!-- Monitor / Brightness Icon -->
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="card-arrow">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+            <h3 class="card-title" style="margin-bottom: 0;">GamerGamma</h3>
+            <span class="badge-live">Live</span>
+            <span class="tag" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3);">Open Source</span>
+          </div>
+
+          <p class="card-desc" data-i18n="app_gamma_desc">
+            Gamma-paneeli näytön ja pelien kirkkauden, kontrastin sekä gammatasojen reaaliaikaiseen säätämiseen. Optimoi näkyvyys pimeissä peleissä vaivattomasti.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag emerald" data-i18n="tag_display_adjust">Näytön säätö</span>
+            <span class="tag emerald">Gamma Panel</span>
+            <span class="tag">GitHub Pages</span>
+            <span class="tag">Gaming Utility</span>
+          </div>
+
+          <div class="card-action">
+            <span data-i18n="app_gamma_action">Avaa GamerGamma -sivusto</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
+
+        <!-- ==========================================
+             FUTURE PROJECT PLACEHOLDER / ADD MORE
+             ========================================== -->
+        <div class="col-12">
+          <div class="bento-card card-placeholder">
+            <div class="placeholder-icon">
+              <!-- Plus Icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+            <h3 data-i18n="placeholder_title">Tulossa lisää projekteja...</h3>
+            <p data-i18n="placeholder_desc">Uusia ideoita, työkaluja ja kokeiluja lisätään tänne sitä mukaa kun ne kehittyvät.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://omaquu.com" class="footer-link">omaquu.com</a>
+        <span>•</span>
+        <a href="https://github.com/omaquu" class="footer-link">GitHub Profile</a>
+        <span>•</span>
+        <a href="https://omaquu.github.io/gamergamma/" class="footer-link">GamerGamma</a>
+        <span>•</span>
+        <a href="https://omaquu.github.io/EQCoach/" class="footer-link">EQCoach</a>
+      </div>
+      <p id="footer-text">&copy; 2026 Omaquu. Luotu GitHub Pagesille.</p>
+    </footer>
+
+  </div>
+
+  <!-- Interactive dynamic spotlight effect & Language switcher script -->
+  <script>
+    // Translations Dictionary
+    const i18nData = {
+      fi: {
+        page_title: "Omaquu — Hub, Pelit & Projektit",
+        meta_desc: "Omaquun virallinen projektisivu — Striimit, tulevat pelit (Tin & Sand, Mindflower) ja hyödylliset sovellukset (EQCoach, GamerGamma).",
+        hero_status: "Kehittää pelejä ja työkaluja",
+        hero_subtitle: "Pelinkehittäjä, striimaaja ja koodaaja. Tältä sivulta löydät kootusti tulevat peliprojektit, sovellukset ja yhteisölinkit.",
+        card_hub_badge: "Pääsivusto",
+        card_hub_desc: "Virallinen kotipesä ja yhteisöportaali. Täältä löydät livestriimit, uusimmat sisällöt sekä kaikki sosiaalisen median kanavat kätevästi saman katon alta.",
+        tag_socials: "Sosiaalinen Media",
+        tag_community: "Yhteisö",
+        card_hub_action: "Avaa sivusto omaquu.com",
+        sec_games_title: "Tulevat Pelit",
+        sec_games_count: "2 Peliprojektia kehityksessä",
+        badge_upcoming: "Tulossa",
+        game_tin_desc: "Diorama-tyylinen toisen maailmansodan (WW2) autobattler -strategiapeli. Kokoa miniatyyrijoukkosi, suunnittele taktinen sijoittelu ja seuraa dynaamisia taisteluita eläväisellä pienoismallikentällä.",
+        tag_strategy: "Strategia",
+        game_mind_desc: "Diablo-henkinen, synkän lumoava toimintaroolipeli (ARPG) steampunk-teemalla. Nopeatempoista hakkaamista, mekanisoituja hirviöitä, syvällistä kykypuuta ja runsasta varusteiden keräilyä.",
+        sec_apps_title: "Sovellukset & Työkalut",
+        sec_apps_count: "Julkaistut projektit",
+        app_eq_desc: "Interaktiivinen valmennus- ja harjoitussovellus suoraan selaimessasi. Suunniteltu selkeäksi ja helppokäyttöiseksi oppimisen tueksi.",
+        tag_interactive: "Interaktiivinen",
+        tag_coaching: "Valmennus",
+        app_eq_action: "Kokeile sovellusta",
+        app_gamma_desc: "Gamma-paneeli näytön ja pelien kirkkauden, kontrastin sekä gammatasojen reaaliaikaiseen säätämiseen. Optimoi näkyvyys pimeissä peleissä vaivattomasti.",
+        tag_display_adjust: "Näytön säätö",
+        app_gamma_action: "Avaa GamerGamma -sivusto",
+        placeholder_title: "Tulossa lisää projekteja...",
+        placeholder_desc: "Uusia ideoita, työkaluja ja kokeiluja lisätään tänne sitä mukaa kun ne kehittyvät.",
+        footer_text: "© 2026 Omaquu. Luotu GitHub Pagesille."
+      },
+      en: {
+        page_title: "Omaquu — Hub, Games & Projects",
+        meta_desc: "Official project hub of Omaquu — Livestreams, upcoming games (Tin & Sand, Mindflower), and web tools (EQCoach, GamerGamma).",
+        hero_status: "Building games & tools",
+        hero_subtitle: "Game developer, streamer & creator. Explore upcoming games, tools, applications, and community links in one place.",
+        card_hub_badge: "Main Hub",
+        card_hub_desc: "Official home and community hub. Watch live streams, check out the latest content, and connect across all social media channels.",
+        tag_socials: "Social Media",
+        tag_community: "Community",
+        card_hub_action: "Visit omaquu.com",
+        sec_games_title: "Upcoming Games",
+        sec_games_count: "2 Game projects in development",
+        badge_upcoming: "Upcoming",
+        game_tin_desc: "A diorama-style World War II autobattler strategy game. Assemble your miniature forces, plan tactical formations, and command battles across lively tabletop dioramas.",
+        tag_strategy: "Strategy",
+        game_mind_desc: "A fast-paced, dark steampunk action RPG inspired by classic hack & slash titles like Diablo. Features intricate talent trees, mechanized monsters, and deep loot progression.",
+        sec_apps_title: "Apps & Tools",
+        sec_apps_count: "Published projects",
+        app_eq_desc: "An interactive coaching and training web app running directly in your browser. Designed for intuitive learning and skill progression.",
+        tag_interactive: "Interactive",
+        tag_coaching: "Coaching",
+        app_eq_action: "Launch App",
+        app_gamma_desc: "A dedicated gamma panel tool for real-time brightness, contrast, and gamma adjustment for displays and games. Maximize clarity in dark gaming scenes.",
+        tag_display_adjust: "Display Tool",
+        app_gamma_action: "Visit GamerGamma Site",
+        placeholder_title: "More projects in the works...",
+        placeholder_desc: "New game concepts, utilities, and experiments will be added here as they develop.",
+        footer_text: "© 2026 Omaquu. Hosted on GitHub Pages."
+      }
+    };
+
+    function setLanguage(lang) {
+      const data = i18nData[lang];
+      if (!data) return;
+
+      // Update lang attribute on html
+      document.documentElement.lang = lang;
+
+      // Update title & meta
+      document.getElementById('page-title').textContent = data.page_title;
+      document.getElementById('meta-desc').setAttribute('content', data.meta_desc);
+      document.getElementById('footer-text').textContent = data.footer_text;
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (data[key]) {
+          el.textContent = data[key];
+        }
+      });
+
+      // Update toggle buttons active state
+      document.getElementById('btn-fi').classList.toggle('active', lang === 'fi');
+      document.getElementById('btn-fi').setAttribute('aria-pressed', lang === 'fi');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+
+      // Persist user selection
+      try {
+        localStorage.setItem('omaquu_landing_lang', lang);
+      } catch (e) {}
+    }
+
+    // Initialize saved language or default to 'fi'
+    (function initLang() {
+      const savedLang = localStorage.getItem('omaquu_landing_lang') || 'fi';
+      if (savedLang === 'en') {
+        setLanguage('en');
+      }
+    })();
+
+    // Dynamic mouse spotlight effect on cards
+    document.querySelectorAll('.bento-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  </script>
+</body>
+</html>
