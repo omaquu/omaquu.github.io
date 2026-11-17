@@ -330,7 +330,7 @@
         </a>
 
         <!-- App 2: GamerGamma -->
-        <div class="bento-card col-6" data-tilt>
+        <a href="https://omaquu.github.io/gamergamma/" target="_blank" rel="noopener noreferrer" class="bento-card col-6" data-tilt>
           <div class="card-glare"></div>
 
           <!-- Visual Chamber: Monitor Gamma Curve & Beam -->
@@ -367,21 +367,66 @@
           </div>
 
           <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: auto;">
-            <a href="https://omaquu.github.io/gamergamma/" target="_blank" rel="noopener noreferrer" class="card-action-link action-emerald">
+            <div class="card-action-link action-emerald">
               <span data-i18n="app_gamma_action">Avaa GamerGamma -sivusto</span>
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
-            </a>
+            </div>
 
-            <a href="https://github.com/omaquu/gamergamma" target="_blank" rel="noopener noreferrer" class="repo-link-pill">
+            <span class="repo-link-pill" onclick="event.stopPropagation(); event.preventDefault(); window.open('https://github.com/omaquu/gamergamma', '_blank')" style="cursor: pointer;">
               <svg fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
               </svg>
               Source
-            </a>
+            </span>
           </div>
-        </div>
+        </a>
+
+        <!-- App 3: Aitohinta -->
+        <a href="https://omaquu.github.io/Aitohinta/" target="_blank" rel="noopener noreferrer" class="bento-card col-6" data-tilt>
+          <div class="card-glare"></div>
+
+          <!-- Visual Chamber: Price Chart & Tag -->
+          <div class="card-visual-chamber visual-aitohinta">
+            <div class="price-monitor">
+              <svg class="price-chart-svg" viewBox="0 0 190 110" fill="none">
+                <!-- Grid background -->
+                <line x1="0" y1="28" x2="190" y2="28" stroke="rgba(245, 158, 11, 0.15)" stroke-dasharray="3 3"/>
+                <line x1="0" y1="55" x2="190" y2="55" stroke="rgba(245, 158, 11, 0.15)" stroke-dasharray="3 3"/>
+                <line x1="0" y1="82" x2="190" y2="82" stroke="rgba(245, 158, 11, 0.15)" stroke-dasharray="3 3"/>
+                <!-- Price trend line -->
+                <path d="M15 30 Q 40 28, 55 50 T 95 55 Q 120 40, 140 65 T 175 80" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+                <!-- Area fill -->
+                <path d="M15 30 Q 40 28, 55 50 T 95 55 Q 120 40, 140 65 T 175 80 L 175 100 L 15 100 Z" fill="rgba(245, 158, 11, 0.12)"/>
+              </svg>
+              <div class="price-pulse"></div>
+            </div>
+          </div>
+
+          <div class="card-header-bar">
+            <h3 class="card-title">Aitohinta</h3>
+            <span class="badge-tag badge-amber">Firefox Extension</span>
+          </div>
+
+          <p class="card-text" data-i18n="app_aitohinta_desc">
+            Hintatarkistaja ja feikkialennusten paljastin suomalaisille verkkokaupoille. Näe tuotteen todellinen hintahistoria ja vertaile hintoja eri kauppojen välillä.
+          </p>
+
+          <div class="card-tags">
+            <span class="mini-tag">Firefox</span>
+            <span class="mini-tag" data-i18n="tag_price_compare">Hintavertailu</span>
+            <span class="mini-tag">Open Source</span>
+            <span class="mini-tag" data-i18n="tag_price_track">Hintojen seuranta</span>
+          </div>
+
+          <div class="card-action-link action-amber">
+            <span data-i18n="app_aitohinta_action">Asenna lisäosa</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </div>
+        </a>
 
         <!-- Future Lab / Placeholders -->
         <div class="col-12">
@@ -418,6 +463,8 @@
         <a href="https://omaquu.github.io/gamergamma/" class="footer-nav-link" target="_blank" rel="noopener noreferrer">GamerGamma</a>
         <span>•</span>
         <a href="https://omaquu.github.io/EQCoach/" class="footer-nav-link" target="_blank" rel="noopener noreferrer">EQCoach</a>
+        <span>•</span>
+        <a href="https://omaquu.github.io/Aitohinta/" class="footer-nav-link" target="_blank" rel="noopener noreferrer">Aitohinta</a>
       </div>
       <p id="footer-text">&copy; 2026 Omaquu. Hosted on GitHub Pages.</p>
     </footer>
@@ -432,7 +479,7 @@
     const i18nData = {
       fi: {
         page_title: "Omaquu — Pelit & Projektit",
-        meta_desc: "Omaquun virallinen sivusto — Tulevat pelit (Tin & Sand, Mindflower) ja sovellukset (EQCoach, GamerGamma).",
+        meta_desc: "Omaquun virallinen sivusto — Tulevat pelit (Tin & Sand, Mindflower) ja sovellukset (EQCoach, GamerGamma, Aitohinta).",
         hero_status: "GAME DEV • STREAMER • CREATOR",
         hero_subtitle: "Tervetuloa viralliselle sivustolle. Tutustu tuleviin peliprojekteihin, kehitettyihin työkaluihin sekä yhteisöön.",
         sec_games_title: "Tulevat Pelit",
@@ -451,13 +498,17 @@
         app_gamma_desc: "Gamma-paneeli näytön ja pelien kirkkauden, kontrastin sekä gammatason reaaliaikaiseen kalibrointiin. Optimoi pimeiden pelien näkyvyys hetkessä.",
         tag_display_adjust: "Näytön säätö",
         app_gamma_action: "Avaa GamerGamma -sivusto",
+        app_aitohinta_desc: "Hintatarkistaja ja feikkialennusten paljastin suomalaisille verkkokaupoille. Näe tuotteen todellinen hintahistoria ja vertaile hintoja eri kauppojen välillä.",
+        tag_price_compare: "Hintavertailu",
+        tag_price_track: "Hintojen seuranta",
+        app_aitohinta_action: "Asenna lisäosa",
         placeholder_title: "Tulossa lisää projekteja...",
         placeholder_desc: "Uusia pelikokeiluja, apuohjelmia ja interaktiivisia konsepteja lisätään kehitystyön edetessä.",
         footer_text: "© 2026 Omaquu. Hosted on GitHub Pages."
       },
       en: {
         page_title: "Omaquu — Games & Projects",
-        meta_desc: "Official site of Omaquu — Upcoming games (Tin & Sand, Mindflower) and utilities (EQCoach, GamerGamma).",
+        meta_desc: "Official site of Omaquu — Upcoming games (Tin & Sand, Mindflower) and utilities (EQCoach, GamerGamma, Aitohinta).",
         hero_status: "GAME DEV • STREAMER • CREATOR",
         hero_subtitle: "Welcome to the official website. Explore upcoming games, developed utilities, and community links.",
         sec_games_title: "Upcoming Games",
@@ -476,6 +527,10 @@
         app_gamma_desc: "A dedicated gamma panel tool to adjust display and game brightness, contrast, and gamma in real time. Optimize visibility in dark games.",
         tag_display_adjust: "Display Tool",
         app_gamma_action: "Visit GamerGamma Site",
+        app_aitohinta_desc: "Price checker and fake discount revealer for Finnish online stores. See the real price history and compare prices across different stores.",
+        tag_price_compare: "Price Comparison",
+        tag_price_track: "Price Tracking",
+        app_aitohinta_action: "Install Extension",
         placeholder_title: "More projects in the works...",
         placeholder_desc: "New game prototypes, utilities, and experiments will be released as development progresses.",
         footer_text: "© 2026 Omaquu. Hosted on GitHub Pages."
