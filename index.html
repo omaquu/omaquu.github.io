@@ -387,18 +387,43 @@
         <a href="https://omaquu.github.io/Aitohinta/" target="_blank" rel="noopener noreferrer" class="bento-card col-6" data-tilt>
           <div class="card-glare"></div>
 
-          <!-- Visual Chamber: Price Chart & Tag -->
+          <!-- Visual Chamber: Aitohinta Live Price Chart & Deal Tag -->
           <div class="card-visual-chamber visual-aitohinta">
+            <div class="deal-pill-float">
+              <span>🏆</span> Alin hinta: <strong>-23%</strong>
+            </div>
+
             <div class="price-monitor">
               <svg class="price-chart-svg" viewBox="0 0 190 110" fill="none">
+                <defs>
+                  <linearGradient id="aitohintaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
                 <!-- Grid background -->
-                <line x1="0" y1="28" x2="190" y2="28" stroke="rgba(245, 158, 11, 0.15)" stroke-dasharray="3 3"/>
-                <line x1="0" y1="55" x2="190" y2="55" stroke="rgba(245, 158, 11, 0.15)" stroke-dasharray="3 3"/>
-                <line x1="0" y1="82" x2="190" y2="82" stroke="rgba(245, 158, 11, 0.15)" stroke-dasharray="3 3"/>
-                <!-- Price trend line -->
-                <path d="M15 30 Q 40 28, 55 50 T 95 55 Q 120 40, 140 65 T 175 80" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+                <line x1="0" y1="28" x2="190" y2="28" stroke="rgba(16, 185, 129, 0.15)" stroke-dasharray="3 3"/>
+                <line x1="0" y1="55" x2="190" y2="55" stroke="rgba(16, 185, 129, 0.15)" stroke-dasharray="3 3"/>
+                <line x1="0" y1="82" x2="190" y2="82" stroke="rgba(16, 185, 129, 0.15)" stroke-dasharray="3 3"/>
+
+                <!-- Reference average price line (dashed amber) -->
+                <line x1="10" y1="48" x2="180" y2="48" stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="1.2" opacity="0.8"/>
+                <text x="175" y="44" font-size="7" fill="#fbbf24" text-anchor="end" font-weight="700">Keskihinta</text>
+
                 <!-- Area fill -->
-                <path d="M15 30 Q 40 28, 55 50 T 95 55 Q 120 40, 140 65 T 175 80 L 175 100 L 15 100 Z" fill="rgba(245, 158, 11, 0.12)"/>
+                <path d="M 15,35 Q 45,30 70,55 T 120,45 Q 145,50 175,88 L 175,102 L 15,102 Z" fill="url(#aitohintaGrad)"/>
+
+                <!-- Main price line dropping to all-time low -->
+                <path d="M 15,35 Q 45,30 70,55 T 120,45 Q 145,50 175,88" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+                <!-- Historical Price Dots with pulsing target -->
+                <circle cx="15" cy="35" r="3" fill="#10b981" stroke="#fff" stroke-width="1"/>
+                <circle cx="70" cy="55" r="3" fill="#10b981" stroke="#fff" stroke-width="1"/>
+                <circle cx="120" cy="45" r="3" fill="#10b981" stroke="#fff" stroke-width="1"/>
+
+                <!-- Current all-time-low drop point (animated pulsing halo) -->
+                <circle class="price-dot-halo" cx="175" cy="88" r="6" fill="none" stroke="#34d399" stroke-width="1.5"/>
+                <circle class="price-dot-glow" cx="175" cy="88" r="3.5" fill="#34d399" stroke="#fff" stroke-width="1.5"/>
               </svg>
               <div class="price-pulse"></div>
             </div>
@@ -406,7 +431,7 @@
 
           <div class="card-header-bar">
             <h3 class="card-title">Aitohinta</h3>
-            <span class="badge-tag badge-amber">Chrome &amp; Firefox</span>
+            <span class="badge-tag badge-emerald">Chrome &amp; Firefox</span>
           </div>
 
           <p class="card-text" data-i18n="app_aitohinta_desc">
@@ -414,18 +439,26 @@
           </p>
 
           <div class="card-tags">
-            <span class="mini-tag">Chrome</span>
-            <span class="mini-tag">Firefox</span>
+            <span class="mini-tag">Chrome &amp; Firefox</span>
             <span class="mini-tag" data-i18n="tag_price_compare">Hintavertailu</span>
             <span class="mini-tag">Open Source</span>
             <span class="mini-tag" data-i18n="tag_price_track">Hintojen seuranta</span>
           </div>
 
-          <div class="card-action-link action-amber">
-            <span data-i18n="app_aitohinta_action">Asenna lisäosa</span>
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: auto;">
+            <div class="card-action-link action-emerald">
+              <span data-i18n="app_aitohinta_action">Asenna lisäosa</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </div>
+
+            <span class="repo-link-pill" onclick="event.stopPropagation(); event.preventDefault(); window.open('https://github.com/omaquu/Aitohinta', '_blank')" style="cursor: pointer;">
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+              </svg>
+              Source
+            </span>
           </div>
         </a>
 
